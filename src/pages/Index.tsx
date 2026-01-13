@@ -14,7 +14,7 @@ const Index = () => {
   return (
     <main className="min-h-screen">
       <Header />
-      <div className="pt-20">
+      <div style={{ paddingTop: '76px' }}>
         <HeroSection />
       </div>
       <AlertSection />
