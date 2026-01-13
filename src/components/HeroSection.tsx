@@ -1,18 +1,28 @@
 import { MessageCircle, AlertTriangle, Clock } from "lucide-react";
+import frtbLogoWhite from "@/assets/frtb-logo-white.png";
 
 const WHATSAPP_LINK = "https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20resolver%20meu%20RAPP%20com%20a%20FRTB.";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen gradient-hero flex items-center">
+    <section className="relative min-h-screen gradient-hero flex flex-col">
+      {/* Logo no topo */}
+      <div style={{ paddingTop: '28px', paddingLeft: '40px' }}>
+        <img 
+          src={frtbLogoWhite} 
+          alt="FRTB Consultoria Ambiental" 
+          style={{ width: '160px', height: 'auto' }}
+        />
+      </div>
+
       {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute inset-0" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }} />
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 py-16 relative z-10 flex-1 flex items-center">
         <div className="max-w-4xl mx-auto text-center">
           {/* Urgency badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/20 border border-destructive/30 mb-8 animate-pulse-subtle">
