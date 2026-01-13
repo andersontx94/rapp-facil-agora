@@ -7,11 +7,11 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen gradient-hero flex flex-col">
       {/* Logo no topo */}
-      <div style={{ paddingTop: '28px', paddingLeft: '40px' }}>
+      <div style={{ paddingTop: '24px', paddingLeft: '32px' }}>
         <img 
           src={frtbLogoWhite} 
           alt="FRTB Consultoria Ambiental" 
-          style={{ width: '160px', height: 'auto' }}
+          style={{ width: '150px', height: 'auto' }}
         />
       </div>
 

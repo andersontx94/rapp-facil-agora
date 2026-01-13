@@ -1,9 +1,20 @@
 import { ExternalLink, Shield, Award, Users } from "lucide-react";
+import frtbLogoWhite from "@/assets/frtb-logo-white.png";
 
 const AuthoritySection = () => {
   return (
-    <section className="py-24 bg-background relative">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-background relative overflow-hidden">
+      {/* Watermark logo - marca d'água sutil */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none">
+        <img 
+          src={frtbLogoWhite} 
+          alt="" 
+          className="w-[400px] h-auto"
+          style={{ filter: 'invert(1)' }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-12">
@@ -19,10 +30,6 @@ const AuthoritySection = () => {
           {/* Authority content */}
           <div className="card-elegant p-8 md:p-12 mb-10">
             <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
-              {/* Logo placeholder */}
-              <div className="w-24 h-24 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
-                <span className="heading-display text-3xl text-accent font-bold">FRTB</span>
-              </div>
               
               <p className="text-body text-lg text-foreground leading-relaxed text-center md:text-left">
                 A FRTB Consultoria Ambiental é referência em regularização ambiental e obrigações legais 
