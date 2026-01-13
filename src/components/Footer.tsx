@@ -1,20 +1,22 @@
 import { MessageCircle, ExternalLink, MapPin, Shield } from "lucide-react";
+import frtbLogoWhite from "@/assets/frtb-logo-white.png";
 
 const WHATSAPP_LINK = "https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20FRTB.";
 
 const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="gradient-hero border-t border-border/30">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-10">
-            {/* Company info */}
+            {/* Company info with logo */}
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
-                  <span className="heading-display text-lg text-accent font-bold">F</span>
-                </div>
-                <span className="heading-display text-xl text-foreground">FRTB Consultoria Ambiental</span>
+              <div className="mb-4">
+                <img 
+                  src={frtbLogoWhite} 
+                  alt="FRTB Consultoria Ambiental" 
+                  style={{ width: '120px', height: 'auto' }}
+                />
               </div>
               <p className="text-body text-sm text-muted-foreground mb-4">
                 Especialistas em regularização ambiental e obrigações legais junto aos órgãos ambientais.
