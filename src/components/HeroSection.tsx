@@ -40,9 +40,9 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
-            O RAPP deve ser entregue até <strong className="text-foreground">31 de março</strong>. 
-            Evite multas, bloqueios no CTF e problemas com o IBAMA. 
-            A FRTB cuida de todo o processo para você, com segurança e responsabilidade técnica.
+            O prazo vai até <strong className="text-foreground">31 de março</strong>. 
+            Quem não entrega pode ser multado e ter o CTF bloqueado. 
+            A FRTB cuida de tudo: levantamento, documentação e protocolo no IBAMA.
           </p>
 
           {/* CTA Button */}

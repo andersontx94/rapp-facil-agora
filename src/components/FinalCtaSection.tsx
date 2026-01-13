@@ -17,8 +17,8 @@ const FinalCtaSection = () => {
           </h2>
           
           <p className="text-body text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Nossa equipe está pronta para analisar sua situação e garantir que sua empresa 
-            esteja regularizada com segurança e dentro do prazo.
+            Fale agora com nossa equipe técnica. Analisamos sua situação e cuidamos 
+            de todo o processo para você ficar em dia com o IBAMA.
           </p>
 
           {/* Main CTA */}
@@ -35,7 +35,7 @@ const FinalCtaSection = () => {
 
           {/* Reassurance */}
           <p className="text-body text-sm text-muted-foreground mt-8">
-            Atendimento rápido e sem compromisso
+            Resposta rápida • Sem burocracia • Atendimento direto
           </p>
         </div>
       </div>
