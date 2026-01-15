@@ -1,7 +1,7 @@
 import { MessageCircle, ExternalLink, MapPin, Shield } from "lucide-react";
 import frtbLogoWhite from "@/assets/frtb-logo-white.png";
 
-const WHATSAPP_LINK = "https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20FRTB.";
+const WHATSAPP_LINK = "https://wa.me/5592984065278?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20FRTB.";
 
 const Footer = () => {
   return (
@@ -33,7 +33,7 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li>
                   <a 
-                    href="https://frtbconsultoria.com.br"
+                    href="https://www.frtbconsultoria.com.br/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors duration-200 text-sm"
