@@ -7,6 +7,7 @@ import WhyFrtbSection from "@/components/WhyFrtbSection";
 import DiyRiskSection from "@/components/DiyRiskSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
 import Footer from "@/components/Footer";
+import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <DiyRiskSection />
       <FinalCtaSection />
       <Footer />
+      <FloatingWhatsAppButton />
     </main>
   );
 };
