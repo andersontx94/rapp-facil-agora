@@ -2,7 +2,7 @@ import { MessageCircle, AlertTriangle, Shield, Clock, MapPin } from "lucide-reac
 import frtbLogoWhite from "@/assets/frtb-logo-white.png";
 import ibamaBg from "@/assets/ibama-bg.webp";
 
-const WHATSAPP_LINK = "https://wa.me/5500000000000?text=Olá!%20Preciso%20resolver%20meu%20RAPP%20com%20a%20FRTB%20Consultoria%20Ambiental.";
+const WHATSAPP_LINK = "https://wa.me/5592984065278?text=Olá!%20Preciso%20resolver%20meu%20RAPP%20com%20a%20FRTB%20Consultoria%20Ambiental.";
 
 const HeroSection = () => {
   return (
