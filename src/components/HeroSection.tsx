@@ -1,4 +1,4 @@
-import { MessageCircle, AlertTriangle } from "lucide-react";
+import { MessageCircle, AlertTriangle, Shield, Clock, MapPin } from "lucide-react";
 import frtbLogoWhite from "@/assets/frtb-logo-white.png";
 import ibamaBg from "@/assets/ibama-bg.webp";
 
@@ -6,51 +6,56 @@ const WHATSAPP_LINK = "https://wa.me/5500000000000?text=Olá!%20Preciso%20resolv
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden">
+    <section className="relative min-h-screen flex flex-col">
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${ibamaBg})` }}
       />
       
-      {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-primary/85" />
+      {/* Dark overlay - 80% opacity for maximum readability */}
+      <div className="absolute inset-0 bg-[#0a1628]/80" />
       
       {/* Logo no topo */}
-      <div className="relative z-10" style={{ paddingTop: '24px', paddingLeft: '32px' }}>
+      <header className="relative z-10 pt-6 px-6 md:px-8">
         <img 
           src={frtbLogoWhite} 
           alt="FRTB Consultoria Ambiental" 
-          style={{ width: '150px', height: 'auto' }}
+          className="w-32 md:w-40 h-auto"
         />
-      </div>
+      </header>
 
-      <div className="container mx-auto px-4 py-16 relative z-10 flex-1 flex items-center">
+      {/* Main content */}
+      <div className="container mx-auto px-6 md:px-8 py-12 md:py-20 relative z-10 flex-1 flex items-center">
         <div className="max-w-4xl mx-auto text-center">
           {/* Urgency badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/20 border border-destructive/30 mb-8 animate-pulse-subtle">
-            <AlertTriangle className="w-4 h-4 text-destructive" />
-            <span className="text-sm font-medium text-destructive">Prazo encerra em 31 de março</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-red-600/20 border border-red-500/40 mb-10">
+            <AlertTriangle className="w-4 h-4 text-red-400" />
+            <span className="text-sm font-semibold text-red-400 tracking-wide">
+              Prazo encerra em 31 de março
+            </span>
           </div>
 
-          {/* Main headline - Pergunta direta */}
-          <h1 className="heading-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
+          {/* Main headline */}
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight tracking-tight">
             Sua empresa já entregou o{" "}
-            <span className="text-accent">RAPP</span> ao IBAMA este ano?
+            <span className="text-amber-400">RAPP</span> ao{" "}
+            <span className="text-amber-400">IBAMA</span> este ano?
           </h1>
 
-          {/* Subheadline - Consciência */}
-          <p className="text-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed">
-            O RAPP é uma <strong className="text-foreground">obrigação legal anual</strong>. 
-            Empresas que não entregarem dentro do prazo ou que preencherem de forma incorreta 
-            podem ser <strong className="text-foreground">multadas</strong> e ter o 
-            <strong className="text-foreground"> CTF bloqueado</strong> pelo IBAMA.
+          {/* Subheadline */}
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8 leading-relaxed font-normal">
+            O <strong className="text-white font-semibold">RAPP</strong> é uma{" "}
+            <strong className="text-white font-semibold">obrigação legal anual</strong>. 
+            Empresas que não entregam dentro do prazo ou que preenchem de forma incorreta 
+            podem ser <strong className="text-white font-semibold">multadas</strong> e ter o{" "}
+            <strong className="text-white font-semibold">CTF bloqueado</strong> pelo IBAMA.
           </p>
 
-          {/* Complemento - Solução */}
-          <p className="text-body text-base text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            A FRTB Consultoria Ambiental cuida de todo o processo com responsabilidade técnica, 
-            evitando erros, retrabalho e riscos para sua empresa.
+          {/* Supporting text */}
+          <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-12 leading-relaxed">
+            A <strong className="text-white font-medium">FRTB Consultoria Ambiental</strong> cuida de todo o processo 
+            com responsabilidade técnica, evitando erros, retrabalho e riscos legais para a sua empresa.
           </p>
 
           {/* CTA Button */}
@@ -58,38 +63,53 @@ const HeroSection = () => {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-whatsapp text-base md:text-lg"
+            className="inline-flex items-center justify-center gap-3 px-10 py-5 text-lg font-bold rounded-xl bg-gradient-to-r from-amber-500 to-amber-400 text-gray-900 shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 hover:scale-[1.02] transition-all duration-300"
           >
-            <MessageCircle className="w-5 h-5" />
+            <MessageCircle className="w-6 h-6" />
             Falar com especialista da FRTB
           </a>
+        </div>
+      </div>
 
-          {/* Trust indicators */}
-          <div className="flex flex-wrap justify-center gap-8 mt-16 pt-8 border-t border-border/50">
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-              <span className="text-sm">Responsabilidade técnica</span>
+      {/* Trust blocks */}
+      <div className="relative z-10 border-t border-white/10 bg-[#0a1628]/60 backdrop-blur-sm">
+        <div className="container mx-auto px-6 md:px-8 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {/* Block 1 */}
+            <div className="flex items-center gap-4 justify-center md:justify-start">
+              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-amber-400/10 flex items-center justify-center">
+                <Shield className="w-6 h-6 text-amber-400" />
+              </div>
+              <div>
+                <span className="text-white font-semibold text-base block">Responsabilidade Técnica</span>
+                <span className="text-gray-400 text-sm">Profissionais habilitados</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className="text-sm">Experiência prática com IBAMA</span>
+            
+            {/* Block 2 */}
+            <div className="flex items-center gap-4 justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-amber-400/10 flex items-center justify-center">
+                <Clock className="w-6 h-6 text-amber-400" />
+              </div>
+              <div>
+                <span className="text-white font-semibold text-base block">Experiência com IBAMA</span>
+                <span className="text-gray-400 text-sm">Anos de prática comprovada</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
-              </svg>
-              <span className="text-sm">Atuação em todo Brasil</span>
+            
+            {/* Block 3 */}
+            <div className="flex items-center gap-4 justify-center md:justify-end">
+              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-amber-400/10 flex items-center justify-center">
+                <MapPin className="w-6 h-6 text-amber-400" />
+              </div>
+              <div>
+                <span className="text-white font-semibold text-base block">Atuação em todo Brasil</span>
+                <span className="text-gray-400 text-sm">Atendimento nacional</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };
