@@ -16,12 +16,12 @@ const segments = [
 
 const WhoMustDeliverSection = () => {
   return (
-    <section className="py-20 bg-background relative">
-      <div className="container mx-auto px-4">
+    <section className="py-16 md:py-20 bg-background relative">
+      <div className="container mx-auto px-5 md:px-4">
         <div className="max-w-5xl mx-auto">
           {/* Section header */}
-          <div className="text-center mb-10">
-            <h2 className="heading-display text-3xl md:text-4xl text-foreground mb-6">
+          <div className="text-center mb-8 md:mb-10">
+            <h2 className="heading-display text-2xl sm:text-3xl md:text-4xl text-foreground mb-5 md:mb-6 px-2">
               Quem é obrigado a entregar o <span className="text-accent">RAPP</span> ao IBAMA
             </h2>
             <div className="section-divider" />
@@ -47,16 +47,16 @@ const WhoMustDeliverSection = () => {
           </div>
 
           {/* Segments grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 mb-8">
             {segments.map((segment, index) => (
               <div 
                 key={index}
-                className="bg-card border border-border rounded-lg p-4 flex items-center gap-3 hover:border-accent/50 transition-colors"
+                className="bg-card border border-border rounded-lg p-3 md:p-4 flex flex-col items-center justify-center text-center gap-2 md:gap-3 hover:border-accent/50 transition-colors min-h-[100px] md:min-h-[80px]"
               >
                 <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
                   <segment.icon className="w-5 h-5 text-accent" />
                 </div>
-                <span className="text-body text-sm text-foreground font-medium">{segment.label}</span>
+                <span className="text-body text-xs md:text-sm text-foreground font-medium leading-tight break-words hyphens-auto">{segment.label}</span>
               </div>
             ))}
           </div>
