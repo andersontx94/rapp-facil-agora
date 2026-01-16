@@ -6,6 +6,7 @@ import WhyNotSimpleSection from "@/components/WhyNotSimpleSection";
 import WrongRappSection from "@/components/WrongRappSection";
 import WhyFrtbSection from "@/components/WhyFrtbSection";
 import DiyRiskSection from "@/components/DiyRiskSection";
+import ChecklistFormSection from "@/components/ChecklistFormSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
 import Footer from "@/components/Footer";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
@@ -21,6 +22,7 @@ const Index = () => {
       <WrongRappSection />
       <WhyFrtbSection />
       <DiyRiskSection />
+      <ChecklistFormSection />
       <FinalCtaSection />
       <Footer />
       <FloatingWhatsAppButton />
