@@ -27,7 +27,7 @@ const DeadlinePenaltiesSection = () => {
             <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8 justify-center">
               <Calendar className="w-6 h-6 md:w-8 md:h-8 text-accent flex-shrink-0" />
               <p className="heading-display text-xl md:text-3xl text-foreground">
-                Prazo: <span className="text-accent">31 de março</span>
+                Prazo: <span className="text-accent">31 de maio</span>
               </p>
             </div>
 

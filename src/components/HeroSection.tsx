@@ -35,7 +35,7 @@ const HeroSection = () => {
           <div className="inline-flex items-center gap-2 px-4 md:px-5 py-2 md:py-2.5 rounded-full bg-red-600/20 border border-red-500/40 mb-8 md:mb-10">
             <AlertTriangle className="w-4 h-4 text-red-400 flex-shrink-0" />
             <span className="text-xs md:text-sm font-semibold text-red-400 tracking-wide">
-              Prazo encerra em 31 de março
+              Prazo encerra em 31 de maio
             </span>
           </div>
 
